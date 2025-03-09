@@ -1,0 +1,46 @@
+plugins {
+	id 'fabric-loom' version '1.9-SNAPSHOT'
+	id 'maven-publish'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = "https://maven.fabricmc.net/"
+    }
+    maven {
+        url = "https://maven.terraformersmc.com/releases/"
+    }
+    maven {
+        url 'https://maven.isxander.dev/releases'
+    }
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"modid" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    modImplementation "dev.isxander:yet-another-config-lib:3.6.1+1.21-fabric"
+    modApi "com.terraformersmc:modmenu:11.0.1"
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}

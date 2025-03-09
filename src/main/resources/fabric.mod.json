@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "highlighter",
+	"version": "1.6",
+	"name": "Highlighter",
+	"description": "Highlights different items in your inventory with more than enough customization!",
+	"authors": [
+		"TheMasterKitty"
+	],
+	"contact": {
+		"discord": "https://discord.gg/sCVM6h2By4",
+		"homepage": "https://modrinth.com/mod/highlighter/"
+	},
+	"icon": "assets/highlighter/icon.png",
+	"environment": "client",
+	"mixins": [
+		{
+			"config": "highlighter.mixins.json",
+			"environment": "client"
+		}
+	],
+	"entrypoints": {
+		"client": [
+			"themasterkitty.highlighter.Main"
+		],
+		"modmenu": [
+			"themasterkitty.highlighter.Config"
+		]
+	},
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "1.21.x",
+		"java": ">=21",
+		"yet_another_config_lib_v3": ">=3.6.1+1.21-fabric"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/sCVM6h2By4"
+			}
+		}
+	}
+}
