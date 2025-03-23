@@ -24,7 +24,7 @@
 			"themasterkitty.highlighter.Main"
 		],
 		"modmenu": [
-			"themasterkitty.highlighter.Config"
+			"themasterkitty.highlighter.ConfigScreen"
 		]
 	},
 	"depends": {

@@ -9,12 +9,12 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import themasterkitty.highlighter.Config;
+import themasterkitty.highlighter.Main;
 
 @Mixin(InGameHud.class)
 public abstract class InGameHudMixin {
     @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;III)V"), method = "renderHotbarItem")
     public void drawItem(DrawContext context, int x, int y, RenderTickCounter tickCounter, PlayerEntity player, ItemStack stack, int seed, CallbackInfo ci) {
-        if (Config.hotbar) Config.highlight(context, stack, x, y);
+        if (Main.hotbar) Main.highlight(context, stack, x, y);
     }
 }
