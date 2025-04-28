@@ -41,7 +41,7 @@ public class Highlights {
         highlights.add(new ItemHighlight("Cobweb", new Color(0xF5F5F5), Items.COBWEB));
         highlights.add(new ItemHighlight("Arrow", new Color(0xDA53F5), Items.ARROW, Items.SPECTRAL_ARROW, Items.TIPPED_ARROW));
         highlights.add(new ItemHighlight("Rail", new Color(0xD1B666), Items.RAIL, Items.POWERED_RAIL, Items.ACTIVATOR_RAIL, Items.DETECTOR_RAIL));
-        highlights.add(new ItemHighlight("Arrow", new Color(0xE33B4F), Items.TNT_MINECART));
+        highlights.add(new ItemHighlight("TNT Cart", new Color(0xE33B4F), Items.TNT_MINECART));
 
         highlights.add(new MatchHighlight("Sword", new Color(0xC7CED3), "_sword"));
         highlights.add(new MatchHighlight("Axe", new Color(0xD5500A), "_axe"));
