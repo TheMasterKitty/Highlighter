@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "themasterkitty.highlighter.mixins",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"HandledScreenMixin",
+		"InGameHudMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

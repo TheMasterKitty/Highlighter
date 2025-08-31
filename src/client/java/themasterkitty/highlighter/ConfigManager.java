@@ -19,6 +19,7 @@ public class ConfigManager {
         JsonObject save = new JsonObject();
 
         save.addProperty("enabled", Main.enabled);
+        save.addProperty("auto-disable", Main.autoDisable);
         save.addProperty("hotbar", Main.hotbar);
         save.addProperty("potion-color", Main.potionColor);
         save.addProperty("shulker-color", Main.shulkerColor);
@@ -52,6 +53,10 @@ public class ConfigManager {
 
             if (read.has("enabled"))
                 Main.enabled = read.get("enabled").getAsBoolean();
+            if (read.has("auto-disable")) {
+                Main.autoDisable = read.get("auto-disable").getAsBoolean();
+                if (Main.autoDisable) Main.enabled = false;
+            }
             if (read.has("hotbar"))
                 Main.hotbar = read.get("hotbar").getAsBoolean();
             if (read.has("potion-color"))

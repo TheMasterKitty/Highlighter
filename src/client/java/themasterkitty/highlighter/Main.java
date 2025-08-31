@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Main implements ClientModInitializer {
-    public static boolean enabled = true, hotbar = false, potionColor = false, shulkerColor = false;
+    public static boolean enabled = true, autoDisable = false, hotbar = false, potionColor = false, shulkerColor = false;
     private static final HashMap<Item, Color> shulkers = new HashMap<>();
     static {
         shulkers.put(Items.SHULKER_BOX, new Color(0xC7B7CE));

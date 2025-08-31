@@ -1,0 +1,26 @@
+{
+  "mappings": {
+    "themasterkitty/highlighter/mixins/HandledScreenMixin": {
+      "Lnet/minecraft/client/gui/DrawContext;drawItem(Lnet/minecraft/item/ItemStack;III)V": "Lnet/minecraft/class_332;method_51428(Lnet/minecraft/class_1799;III)V",
+      "Lnet/minecraft/client/gui/DrawContext;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;III)V": "Lnet/minecraft/class_332;method_55231(Lnet/minecraft/class_1799;III)V",
+      "drawSlot": "Lnet/minecraft/class_465;method_2385(Lnet/minecraft/class_332;Lnet/minecraft/class_1735;)V"
+    },
+    "themasterkitty/highlighter/mixins/InGameHudMixin": {
+      "Lnet/minecraft/client/gui/DrawContext;drawItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;III)V": "Lnet/minecraft/class_332;method_51423(Lnet/minecraft/class_1309;Lnet/minecraft/class_1799;III)V",
+      "renderHotbarItem": "Lnet/minecraft/class_329;method_1762(Lnet/minecraft/class_332;IILnet/minecraft/class_9779;Lnet/minecraft/class_1657;Lnet/minecraft/class_1799;I)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "themasterkitty/highlighter/mixins/HandledScreenMixin": {
+        "Lnet/minecraft/client/gui/DrawContext;drawItem(Lnet/minecraft/item/ItemStack;III)V": "Lnet/minecraft/class_332;method_51428(Lnet/minecraft/class_1799;III)V",
+        "Lnet/minecraft/client/gui/DrawContext;drawItemWithoutEntity(Lnet/minecraft/item/ItemStack;III)V": "Lnet/minecraft/class_332;method_55231(Lnet/minecraft/class_1799;III)V",
+        "drawSlot": "Lnet/minecraft/class_465;method_2385(Lnet/minecraft/class_332;Lnet/minecraft/class_1735;)V"
+      },
+      "themasterkitty/highlighter/mixins/InGameHudMixin": {
+        "Lnet/minecraft/client/gui/DrawContext;drawItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;III)V": "Lnet/minecraft/class_332;method_51423(Lnet/minecraft/class_1309;Lnet/minecraft/class_1799;III)V",
+        "renderHotbarItem": "Lnet/minecraft/class_329;method_1762(Lnet/minecraft/class_332;IILnet/minecraft/class_9779;Lnet/minecraft/class_1657;Lnet/minecraft/class_1799;I)V"
+      }
+    }
+  }
+}

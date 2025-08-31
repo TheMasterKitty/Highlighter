@@ -11,19 +11,21 @@ public class Highlights {
     public static final ArrayList<Highlight> highlights = new ArrayList<>();
     static {
         highlights.add(new ConditionHighlight("Totem (When Missing)", new Color(0xFFC800),
-                i -> i.getItem() == Items.TOTEM_OF_UNDYING &&
-                        MinecraftClient.getInstance().player != null &&
-                        (
-                            MinecraftClient.getInstance().player.getOffHandStack().getItem() != Items.TOTEM_OF_UNDYING ||
-                            MinecraftClient.getInstance().player.getInventory().main.stream().limit(9).noneMatch(item -> item.getItem() == Items.TOTEM_OF_UNDYING)
-                        )
+            i -> i.getItem() == Items.TOTEM_OF_UNDYING &&
+                MinecraftClient.getInstance().player != null &&
+                (
+                    MinecraftClient.getInstance().player.getOffHandStack().getItem() != Items.TOTEM_OF_UNDYING ||
+                    MinecraftClient.getInstance().player.getInventory().main.stream().limit(9).noneMatch(item -> item.getItem() == Items.TOTEM_OF_UNDYING)
                 )
+            )
         );
 
         highlights.add(new EnchantHighlight("Piercing Crossbow", new Color(0xFF0000), "piercing"));
         highlights.add(new EnchantHighlight("Multishot Crossbow", new Color(0x00FF00), "multishot"));
         highlights.add(new EnchantHighlight("Breach Mace", new Color(0x00FFD9), "breach"));
         highlights.add(new EnchantHighlight("Density Mace", new Color(0x00AAFF), "density"));
+        highlights.add(new EnchantHighlight("Silk Touch", new Color(0x919191), "silk_touch"));
+        highlights.add(new EnchantHighlight("Fortune", new Color(0x36BA2D), "fortune"));
 
         highlights.add(new ItemHighlight("Totem", new Color(0xFFC800), Items.TOTEM_OF_UNDYING));
         highlights.add(new ItemHighlight("Elytra", new Color(0xDBDBDB), Items.ELYTRA));

@@ -44,6 +44,12 @@ public class ConfigScreen implements ModMenuApi {
                 .customController(opt -> new BooleanController(opt, true))
                 .build());
         options.option(Option.<Boolean>createBuilder()
+                .name(Text.literal("Auto Disable on Re-Launch"))
+                .description(OptionDescription.of(Text.literal("Toggle Highlighter Enable off when launching your game")))
+                .binding(false, () -> Main.autoDisable, value -> Main.autoDisable = value)
+                .customController(opt -> new BooleanController(opt, true))
+                .build());
+        options.option(Option.<Boolean>createBuilder()
                 .name(Text.literal("Color Hotbar"))
                 .description(OptionDescription.of(Text.literal("Enable to color your hotbar when outside of your inventory")))
                 .binding(false, () -> Main.hotbar, value -> Main.hotbar = value)
